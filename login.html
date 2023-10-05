@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login page</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli'><link rel="stylesheet" href="./assets/css/login.css">
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+<script src="form.js" type="module"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="pt-5">
+    <h1 class="text-center">Log in</h1>
+  
+<div class="container">
+                <div class="row">
+                    <div class="col-md-5 mx-auto">
+                        <div class="card card-body">
+                                                    
+                            <form id="submitForm" action="./index.html" >
+                                <div class="form-group required">
+                                    <label for="username" id="email">Username / Email</label>
+                                    <input type="email" class="form-control text-lowercase" placeholder="email" id="email" />
+                                </div>                    
+                                <div class="form-group required">
+                                    <label class="d-flex flex-row align-items-center" for="password">Password 
+                                        <a class="ml-auto border-link small-xl" href="/forget-password">Forget?</a></label>
+                                    <input type="password" class="form-control" placeholder="password" id="password" />
+                                </div>
+                                <div class="form-group mt-4 mb-4">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="remember-me" name="remember-me" data-parsley-multiple="remember-me">
+                                        <label class="custom-control-label" for="remember-me">Remember me?</label>
+                                    </div>
+                                </div>
+                                <div class="form-group pt-1">
+                                    
+                                        <button class="btn btn-primary btn-block" type="submit" onclick="signIn()" id="signIn" >Log In</button>
+                                    
+                                </div>
+                            </form>
+                            <p class="small-xl pt-3 text-center">
+                                <span class="text-muted">Not a member?</span>
+                                <a href="./signup.html">Sign up</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
